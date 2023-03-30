@@ -5,17 +5,31 @@ const student1 = new Student('Davide', 'Consigliere', 1989, [4, 6, 7, 4, 6])
 const student2 = new Student('Francesc', 'Badile', 1993, [5, 8, 6, 7, 10])
 const student3 = new Student('Valentina', 'Cherubuni', 2001, [8, 7, 10, 9, 8])
 
-const teacher = new Teacher('Andre', ' Asioli', 1978, [student1, student2, student3])
+const teacher1 = new Teacher('Andre', ' Asioli', 1978, [student1, student2, student3])
 
 
 // FUNZIONE PER LA MEDIA 
-console.log(student2.calulateMean());
+// console.log(student2.calulateMean());
 
 //  FUNZIONE PER TROVARE LO STUDENTE MIGLIORE 
-console.log(teacher.findBestStudent());
+// console.log(teacher.findBestStudent());
 
+
+console.log(teacher1);
+console.log(student1);
+console.log(student2);
+console.log(student3);
+
+
+console.log(student2.calculateMean());
+console.log(teacher1.findBestStudent());
+
+console.log(teacher1.calculateAge());
+console.log(student2.toString());
+console.log(teacher1.toString());
 
 //_-_-_-_-_-    COMPITO     _-_-_-_-_-
+
 
 
 
@@ -56,6 +70,7 @@ console.log(teacher.findBestStudent());
 // }
 
 // console.log(calculateMeanOfStudent(student1));
+
 
 //-------- FUNZIONE PER TROVARE LO STUDENTE MIGLIORE ---------
 

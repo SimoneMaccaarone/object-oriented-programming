@@ -11,7 +11,7 @@ class Student {
     }
 
     // FUNZIONE PER CALCOLARE LA MEDIA
-    calulateMean() {
+    calculateMean() {
         const grades = this.grades;
         let sum = 0
         for (let i = 0; i < grades.length; i++) {
@@ -23,7 +23,13 @@ class Student {
     }
 
     toString(){
-       
+       let studentString= `
+       NOME: ${this.name}\n
+       COGNOME: ${this.surname}\n
+       ETA': ${this.calculateAge()}\n
+       MEDIA: ${this.calculateMean()}\n
+       `
+       return studentString
     }
     //NOME: Davide
     //COGNOME: Consigliere
@@ -32,9 +38,11 @@ class Student {
     //MIGLIOR STUDENTE: Valentina Cherubuni
 
 
-
     calculateAge(){
-        // deve ritornare un numero dell eta attuale dello studente (2023- yob)
+    
+        let year =new Date().getFullYear()
+        let age = year-this.yob
+        return age
     }
     //34
 }

@@ -18,8 +18,8 @@ class Teacher {
         for (let i = 0; i < students.length; i++) {
             const actualStudent = students[i];
 
-            const bestMean = bestStudent.calulateMean();
-            const actualMean = actualStudent.calulateMean();
+            const bestMean = bestStudent.calculateMean();
+            const actualMean = actualStudent.calculateMean();
             if (actualMean > bestMean) {
                 bestStudent = actualStudent
             }
@@ -27,16 +27,25 @@ class Teacher {
         return bestStudent;
     }
 
+    //FUNZIONE PER TRASFORMARE TUTTO IN STRINGA 
+
+
     toString(){
+        let teacherString= `
+        NOME: ${this.name}\n
+        COGNOME: ${this.surname}\n
+        ETA': ${this.calculateAge()}\n
+        MIGLIORE STUDENTE: ${this.findBestStudent()}`
+        return teacherString;
 
     }
-    //NOME: Andrea
-    //COGNOME: Asioli
-    //ETA: 45
-    //MIGLIOR STUDENTE: Valentina Cherubuni
-
+    
+    //FUNZIONE PER CALCOLARE L' ETA 
     calculateAge(){
-        // deve ritornare un numero dell eta attuale dello studente (2023- yob)
+        const date = new Date();
+        let year = date.getFullYear();
+        let age = year-this.yob;
+        return age;
     }
     //45
 }
