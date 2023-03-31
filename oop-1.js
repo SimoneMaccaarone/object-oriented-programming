@@ -2,33 +2,39 @@
 //-------- CREAZIONE STUDENTI & PROFESSORE ---------
 
 const student1 = new Student('Davide', 'Consigliere', 1989, [4, 6, 7, 4, 6])
-const student2 = new Student('Francesc', 'Badile', 1993, [5, 8, 6, 7, 10])
+const student2 = new Student('Francesco', 'Badile', 1993, [5, 8, 6, 7, 10])
 const student3 = new Student('Valentina', 'Cherubuni', 2001, [8, 7, 10, 9, 8])
+const student4 = new Student('Simone', 'Maccarone',2003,);
+const teacher = new Teacher('Andrea', ' Asioli', 1978, [student1, student2, student3])
 
-const teacher1 = new Teacher('Andre', ' Asioli', 1978, [student1, student2, student3])
+const vecchietto = new Person('Battista','Parodi',1934)
 
 
-// FUNZIONE PER LA MEDIA 
-// console.log(student2.calulateMean());
+console.log(vecchietto.toString())
+console.log(student4.toString())
+
+student1.yob= 2979;
+
+
+// student2.grades = [20, 30, 40, 50, 60]
+
+console.log(teacher + '')
+console.log(student1.yob)
+console.log(student3.yob)
+console.log(student2.grades)
+
+
+//  FUNZIONE PER LA MEDIA 
+console.log(`MEDIA DEI VOTI DI:`, student2.calculateMean());
 
 //  FUNZIONE PER TROVARE LO STUDENTE MIGLIORE 
-// console.log(teacher.findBestStudent());
+console.log(teacher.findBestStudent());
 
+//  FUNZIONE PER CALCOLARE L'ETA 
+console.log(teacher.calculateAge());
 
-console.log(teacher1);
-console.log(student1);
-console.log(student2);
-console.log(student3);
-
-
-console.log(student2.calculateMean());
-console.log(teacher1.findBestStudent());
-
-console.log(teacher1.calculateAge());
-console.log(student2.toString());
-console.log(teacher1.toString());
-
-//_-_-_-_-_-    COMPITO     _-_-_-_-_-
+// console.log(student2.toString());
+// console.log(teacher.toString());
 
 
 
@@ -38,7 +44,8 @@ console.log(teacher1.toString());
 
 
 
-//--------- VECCHIO CODIDE ---------------
+
+//--------- VECCHIO CODICE ---------------
 //  // esempio di vecchi studenti
 
 // const student1 = {

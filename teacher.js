@@ -1,10 +1,8 @@
-class Teacher {
+class Teacher extends Person {
 
     constructor(name, surname, yob, students) {
 
-        this.name = name;
-        this.surname = surname;
-        this.yob = yob;
+        super(name,surname,yob)
         this.students = students;
     }
 
@@ -28,24 +26,22 @@ class Teacher {
     }
 
     //FUNZIONE PER TRASFORMARE TUTTO IN STRINGA 
-
-
     toString(){
-        let teacherString= `
+       return super.toString() + `
         NOME: ${this.name}\n
         COGNOME: ${this.surname}\n
         ETA': ${this.calculateAge()}\n
-        MIGLIORE STUDENTE: ${this.findBestStudent()}`
-        return teacherString;
+        MIGLIORE STUDENTE: ${this.findBestStudent().name} ${this.findBestStudent().surname}`
+
 
     }
     
-    //FUNZIONE PER CALCOLARE L' ETA 
-    calculateAge(){
-        const date = new Date();
-        let year = date.getFullYear();
-        let age = year-this.yob;
-        return age;
-    }
+    // //FUNZIONE PER CALCOLARE L'ETA 
+    // calculateAge(){
+    //     const date = new Date();
+    //     let year = date.getFullYear();
+    //     let age = year-this._yob;
+    //     return age;
+    // }
     //45
 }
